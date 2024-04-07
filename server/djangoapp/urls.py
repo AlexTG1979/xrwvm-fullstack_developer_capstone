@@ -7,12 +7,12 @@ from . import views
 app_name = 'djangoapp'
 urlpatterns = [
     # path for registration
-    path(route='register', view=views.logout_request, name='logout'),
-    path(route='login', view=views.login_user, name='login'),
+    path(route='register', view = views.logout_request, name='logout'),
+    path(route='login', view = views.login_user, name='login'),
     # path for dealer reviews view
 
     # path for logout
-    path(route='logout',  view=views.logout_request, name="logout"),
+    path(route='logout', view = views.logout_request, name="logout"),
 
     # path for get_dealerships
     # path(route='get_dealers', view=views.get_dealerships, name='get_dealers'),
@@ -28,6 +28,6 @@ urlpatterns = [
     # path(route='reviews/dealer/<int:dealer_id>', view=views.get_dealer_reviews, name='dealer_details'),
 
     # path for get_cars view
-    # path(route='get_cars', view=views.get_cars, name ='getcars'),
+    path(route='get_cars', view = views.get_cars, name ='getcars'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
